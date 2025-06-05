@@ -4,6 +4,7 @@ import Post from "../pages/Post";
 import CreatePost from "../pages/CreatePost";
 import Login from "../pages/Login";
 import Register from "../pages/Register";
+import PageNotFound from "../pages/PageNotFound";
 
 export default function AppRouter() {
   return (
@@ -14,7 +15,7 @@ export default function AppRouter() {
           <Route path="createpost/:userId" element={<CreatePost />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
-          <Route path="*" element={<p>Page Not Found</p>} />
+          <Route path="*" element={<PageNotFound />} />
         </Route>
       </Routes>
     </BrowserRouter>
