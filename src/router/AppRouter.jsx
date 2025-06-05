@@ -11,7 +11,7 @@ export default function AppRouter() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Post />} />
-          <Route path="createpost" element={<CreatePost />} />
+          <Route path="createpost/:userId" element={<CreatePost />} />
           <Route path="login" element={<Login />} />
           <Route path="register" element={<Register />} />
           <Route path="*" element={<p>Page Not Found</p>} />

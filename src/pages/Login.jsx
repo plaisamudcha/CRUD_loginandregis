@@ -33,13 +33,16 @@ export default function Login() {
         inputLogin
       );
       console.log("res", res.data);
+      const uuid = res.data.user.id;
+      const encoded = btoa(uuid);
       setInputLogin(initialLogin);
-      navi("/createpost");
+      navi(`/createpost/${encoded}`);
     } catch (err) {
       const errObj = yupToError(err);
       setError(errObj);
     }
   };
+
   return (
     <div className="my-30">
       <fieldset className="fieldset bg-base-200 border-base-300 rounded-box w-xs border p-4 mx-auto">
